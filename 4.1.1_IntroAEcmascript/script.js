@@ -1,14 +1,16 @@
+import { calcularAreaCirculo } from "./figuras.js";
+
 // Repaso de var, let y const
 
-console.log(edad); // Las variables var automáticamente se declaran hasta arriba del código.
+console.log(edad1); // Las variables var automáticamente se declaran hasta arriba del código.
 // console.log(letEdad); // Las variables let NO se mueven hasta arriba del código.
 
 let letEdad = 26;
 
-var edad; // Declarando una variable.
-edad = 25; // Asignado una variable.
+var edad1; // Declarando una variable.
+edad1 = 25; // Asignado una variable.
 
-var edad = 26; // Declarando y asignado una variable. Es posible redeclarar una variable con var
+var edad1 = 26; // Declarando y asignado una variable. Es posible redeclarar una variable con var
 
 // Cuando usar let y cuando usar const.
 // Vamos a usar const en alguno de los siguientes casos:
@@ -36,19 +38,19 @@ function miFuncion(){
     console.log("let1 = " + let1);
     // console.log("let2 = " + let2);
 
-    edad = 30;
+    edad1 = 30;
 
 }
 
 function miOtraFuncion(){
-    edad = 40;
+    edad1 = 40;
 }
 
 
 miOtraFuncion();
 miFuncion();
 
-console.log("edad: " + edad);
+console.log("edad: " + edad1);
 
 console.log("Afuera de la función.");
 //console.log("var1 = " + var1);
@@ -188,3 +190,10 @@ let [linea2] = filaDeTortillas;
 
 console.log(`${linea1} ${linea2}`);
 
+// Destructuración de un objeto creado a partir de una clase.
+let {edad, cancion} = persona1;
+console.log(`${edad} ${cancion}`);
+
+primerPersona = 'Pedro';
+
+console.log(`El área de un círculo de radio 5 es: ${calcularAreaCirculo(5)}`);

@@ -10,6 +10,15 @@ edad = 25; // Asignado una variable.
 
 var edad = 26; // Declarando y asignado una variable. Es posible redeclarar una variable con var
 
+// Cuando usar let y cuando usar const.
+// Vamos a usar const en alguno de los siguientes casos:
+/*
+    1. Cuando estamos seguros que un valor no va a cambiar durante toda nuestra aplicación.
+    2. Cuando utilizamos el valor una única vez.
+    3. Cuando asignamos una función flecha.
+*/
+
+
 function miFuncion(){
     // Alcance de función
     var var1 = 2;
@@ -63,7 +72,7 @@ function realizarOperacionMatematica(funcionAEjecutar, a, b){
 realizarOperacionMatematica((a, b) =>  a * 5 + 8 - b, 5, 4); // Si la función es únicamente una expresión, no es necesario el return ni las llaves.
 realizarOperacionMatematica((a, b) => {return b * a - 5}, 10, 5);
 
-let restaFlecha = (a, b) => {
+const restaFlecha = (a, b) => {
     return a - b;
 }
 
@@ -139,3 +148,43 @@ persona2.tonoDeVoz = 'grave';
 console.log(persona1.colorDeCabello);
 console.log(persona2.tonoDeVoz);
 console.log(cantante.colorDeCabello);
+
+// `` <- backticks
+// '' <- comillas simples
+// "" <- comillas dobles
+
+let paisDeOrigen = 'México';
+console.log(`El nombre de la persona1 es ${persona1.nombre}, tiene ${persona1.edad} y es de ${paisDeOrigen}`);
+
+
+// Destructuración
+
+// Destructuración de objetos literales
+let gato = {
+    colorDeOjos: 'Verdes',
+    nombreGato: 'Tigrillo',
+    colorPelo: 'Naranja',
+    vidasRestantes: 9
+}
+
+//let colorDeOjos = gato.colorDeOjos;
+//let nombreGato = gato.nombre;
+//let vidasRestantes = gato.vidasRestantes;
+
+// Se pueden renombrar las variables con la sintaxis:
+//  <nombreDePropiedad>: <nuevoNombre>
+let { vidasRestantes: vida, colorDeOjos, nombreGato } = gato;
+console.log(`${colorDeOjos} ${nombreGato} ${vida}`);
+
+// Destructuración de arreglos
+let filaDeTortillas = ['Juan', 'Benjamín', 'Miguel', 'Jose']; // Si quieren ignorar un valor del arreglo se utiliza el guión bajo.
+let [primerPersona, segundaPersona, _, cuartaPersona] = filaDeTortillas;
+
+console.log(`Orden de las personas en la fila: `);
+console.log(`${primerPersona}  ${segundaPersona}  ${cuartaPersona}`);
+
+let [linea1] = filaDeTortillas;
+let [linea2] = filaDeTortillas;
+
+console.log(`${linea1} ${linea2}`);
+

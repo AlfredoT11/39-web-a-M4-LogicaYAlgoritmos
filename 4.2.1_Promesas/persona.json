@@ -1,0 +1,10 @@
+{
+    "nombre": "Juan",
+    "edad": 25,
+    "mayorEdad": true,
+    "mascotas": ["Luna", "Pelusa", "Solobino"],
+    "universidad": {
+        "nombre": "Escuela de Cómputo",
+        "direccion": "Calle 33"
+    }
+}

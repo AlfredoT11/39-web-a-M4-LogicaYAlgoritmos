@@ -95,7 +95,7 @@ c();
     |  recursividad()  |
     |  recursividad()  |
     |  recursividad()  |
-    ---------
+    --------------------
 */
 
 // A continuación se muestra una función recursiva con condición de paro.

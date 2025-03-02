@@ -1,5 +1,5 @@
 // A partir de un arreglo encontrar la suma máxima de n elementos contiguos.
-// No se debe modificar el arrelgo original.
+// No se debe modificar el arreglo original.
 let n = 4;
 //           0  1  2  3   4  5  6  7  8
         //   0 al 3 = 17            max = 17
@@ -71,4 +71,4 @@ Ejemplo 3:
      0   4 6
 a = "1245897", b = "897"
          897
-*/
+Output: 4 

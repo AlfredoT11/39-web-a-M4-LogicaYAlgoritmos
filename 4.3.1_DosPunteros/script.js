@@ -1,4 +1,4 @@
-let numeros = [5, 2, 4, 7, 9, 18, 97, 42];
+//let numeros = [5, 2, 4, 7, 9, 18, 97, 42];
 // Crear una función para ordenar los números de menor a mayor.
 
 // Complejidad computacional
@@ -73,7 +73,7 @@ O(log2(n))
 // Solución precisa en el resultado *
 
 
-// Dado un arreglo de números ordenados de menor a mayor y un valor objetivo.
+// Dado un arreglo de números ordenados de menor a mayor y un valor objetivo,
 // Decidir si hay un par de números dentro del arreglo que al sumarse den como resultado el valor objetivo.
 /*
     [2, 3, 4, 9, 18, 20]
@@ -111,3 +111,30 @@ O(log2(n))
     O(n)
 
 */
+
+// Ejemplo de técnica de 2 punteros
+let valores = [1, 2, 4, 5, 7, 9, 15, 20];
+function obtenerParMaximo(arreglo, valorBuscado){
+    let punteroIzq = 0;
+    let punteroDer = arreglo.length;
+
+    while(punteroIzq < punteroDer){
+        if(arreglo[punteroIzq] + arreglo[punteroDer] == valorBuscado){
+            return [punteroIzq, punteroDer];
+        }
+
+        if(arreglo[punteroIzq] + arreglo[punteroDer] < valorBuscado){
+            punteroIzq++;
+        } else {
+            punteroDer--;
+        }
+    }
+    return [-1, -1];
+}
+
+console.log(obtenerParMaximo(valores, 9));
+console.log(obtenerParMaximo(valores, 500));
+console.log(obtenerParMaximo(valores, 3));
+console.log(obtenerParMaximo(valores, 35));
+console.log(obtenerParMaximo(valores, 12));
+

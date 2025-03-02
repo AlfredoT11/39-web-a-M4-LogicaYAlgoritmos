@@ -58,6 +58,9 @@ function merge(A, B, C){
 
 function mergeSort(arreglo){
 
+    // Descomentar la siguiente línea para ver cómo se van haciendo las particiones.
+    // console.log(arreglo);
+
     let arregloOrdenado = [];
 
     // Mientras el tamaño del arreglo sea mayor a 2 podemos seguir partiendo en 2.

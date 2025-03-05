@@ -1,0 +1,6 @@
+[WARNING] Alguien trató de ingresar al sistema.
+[OK] El usuario PedroPerez33 ingresó al sistema.
+[OK] El usuario PedroPerez33 ingresó al sistema.
+[OK] El usuario PedroPerez33 ingresó al sistema.
+[OK] El usuario PedroPerez33 ingresó al sistema.
+[WARNING] Alguien trató de ingresar al sistema.
